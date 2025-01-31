@@ -1,4 +1,5 @@
-import Table from  '../components/Table'
+import SortableTable from '../components/SortableTable'
+
 
 export default function TablePage(){
     const data = [
@@ -29,6 +30,7 @@ export default function TablePage(){
     ]
 
     return (
-        <Table data = { data }  config ={config}/>
+        //<Table data = { data }  config ={config}/>
+        <SortableTable data={data} config ={config}/>
     )
 }
