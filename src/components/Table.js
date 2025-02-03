@@ -18,7 +18,10 @@ export default function Table({ data , config }){
     //rendering the table header using data prop
     const renderHeader = config.map((columnConfig) =>{
         return(
-            <th className="px-4 py-2 border-b border border-gray-900" key={columnConfig}>{columnConfig.lable}</th>
+            <>
+            { columnConfig.header ? columnConfig.header() : <th  className="px-4 py-2 border-b border border-gray-900" key ={columnConfig.lable}>{columnConfig.lable}</th> }
+            </>
+           
         )
     }
     )

@@ -9,11 +9,12 @@ export default function TablePage(){
         {name: 'Mango', color: 'bg-green-500', price: 150}
     ]
     
-    //Adding config so that our table can show dynamic data, which will be also an array of objects.
+    //Adding  lableconfig so that our table can show dynamic data, which will be also an array of objects.
     const config = [
         {
             lable: 'Name',
-            render: (fruit) => fruit.name
+            render: (fruit) => fruit.name,
+            sortValue: (data) => data.name
         },
         {
             lable: 'Color',
@@ -21,7 +22,8 @@ export default function TablePage(){
         },
         {
             lable: 'Price',
-            render: (fruit) => fruit.price
+            render: (fruit) => fruit.price,
+            sortValue: (data) => data.price
         },
         {
             lable: 'Price with Tax',
